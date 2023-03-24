@@ -14,6 +14,8 @@ app.set("views", _dirname + '/views');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+app.use('/', require('./routes/server'))
+
 app.listen(PORT, ()=>{
 console.log(`Server started on Port ${PORT}`)
 })
